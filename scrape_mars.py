@@ -122,6 +122,9 @@ def scrape_mars_hemi():
     # Retrieve all items that have hemi info
     hemi_items = soup.find_all('div', class_='item')
 
+    # base url to attach to image partial urls
+    hemi_base_url = 'https://astrogeology.usgs.gov'
+
     # Create empty list to house hemi information
     hemi_image_urls = []
 
