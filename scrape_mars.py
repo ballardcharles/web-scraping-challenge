@@ -10,7 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 def init_browser():
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    return = Browser('chrome', **executable_path, headless=False)
+    return Browser('chrome', **executable_path, headless=False)
 
 mars_info = {}
 
