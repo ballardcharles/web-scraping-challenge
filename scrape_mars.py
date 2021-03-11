@@ -34,9 +34,9 @@ def scrape_mars_news():
     slides = soup.find_all('li', class_='slide')
 
     # Retrieve article titles and paragraph information
-    content_title = slides[1].find('div', class_ = 'content_title')
+    content_title = slides[0].find('div', class_ = 'content_title')
     news_title = content_title.text.strip()
-    article_teaser_body = slides[1].find('div', class_ = 'article_teaser_body')
+    article_teaser_body = slides[0].find('div', class_ = 'article_teaser_body')
     news_p = article_teaser_body.text.strip()
 
     # Add to dictionary
