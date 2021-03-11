@@ -17,16 +17,16 @@
     <div class="container">
 
         <!-- Jumbotron -->
-        <div class="jumbotron text-center" style="background-image: url(https://cdn.theatlantic.com/static/mt/assets/science/0831Pic.jpg); background-size: 100%; height: 100%;">
-            <h1 class="display-2">Mission to Mars</h1>
+        <div class="jumbotron text-center" style="background-color: rgb(189, 90, 45); background-size: 100%; height: 100%;">
+            <h1 class="display-2" style="color: black;">Mission to Mars</h1>
             <a class="btn btn-lg text-white" style="background-color: rgb(100, 136, 236);" href="/scrape" role="button">Scrape New
                 Data</a>
         </div>
 
         <!-- News Section -->
         <div class="container">
-            <h3>Latest Mars News</h3>
-            <h6 style="color: #c1440e">{{ mars_info.news_title }}</h6>
+            <h1 style="color: rgb(43, 43, 43); font-weight: bolder;">Latest Mars News</h1>
+            <h4 style="color: rgb(43, 43, 43); font-weight: bold;">{{ mars_info.news_title }}</h4>
             <p>{{ mars_info.news_p }}</p>
         </div>
 
@@ -34,7 +34,7 @@
             <div class="row">
                 <!-- Left Image-->
                 <div class="col-lg-8 col-md-8 col-sm-12">
-                    <h3>Featured Mars Image</h3>
+                    <h1 style="color: rgb(43, 43, 43); font-weight: bolder;">Featured Mars Image</h1>
                     <img src="{{ mars_info.image_url }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
                 </div>
 
@@ -44,7 +44,7 @@
                     <br>
                     <h3>Mars Facts</h3>
                     <div style="max-width: 450px; max-height: 150px; font-size: 15px; margin-bottom: 65px;">
-                        {{mars_info.tables|safe}}
+                        {{mars_info.mars_tables|safe}}
                     </div>
                 </div> <!-- col4 -->
             </div><!-- Row -->
@@ -56,9 +56,9 @@
             <hr>
             <div class="col-md-12">
                 <div class="row">
-                    {% for item in mars_info.hiu %}
+                    {% for item in mars_info.hemi_image_urls %}
                     <div class="col-md-6">
-                        <div class="card text-white bg-dark" style="margin: 30px;">
+                        <div class="card text-white bg-danger" style="margin: 30px;">
                             <img class="card-img-top" src="{{ item.img_url }}" />
                             <div class="card-body">
                                 <p class="card-text">{{ item.title }}</p>
